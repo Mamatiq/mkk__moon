@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: notes-app-container
+    build: .
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
